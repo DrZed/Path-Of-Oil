@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane stylesheets="@dark.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.drzed.pathofoil.MainController">
+   <center>
+       <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="210.0">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="70.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="70.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="70.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <ImageView fx:id="oil1" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" />
+           <ImageView fx:id="oil2" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+        </ImageView>
+           <ImageView fx:id="oil3" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+       </GridPane>
+   </center>
+   <top>
+      <MenuBar onMouseDragged="#onDrag" onMousePressed="#onPress" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu id="titleBar" mnemonicParsing="false" text="Path Of Oil">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onQuit" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
