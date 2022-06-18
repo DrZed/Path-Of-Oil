@@ -51,5 +51,6 @@ public class MainController {
 
     public void onQuit() {
         Platform.exit();
+        System.exit(0);
     }
 }
